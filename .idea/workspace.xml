@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d751c01-56a6-48df-bdbb-9a0fdf189b4e" name="Changes" comment="feat:Ignore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/top/alcremie/chatbot/api/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot-api-interfaces/src/test/java/top/alcremie/chatbot/api/test/ApiTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="4d751c01-56a6-48df-bdbb-9a0fdf189b4e" name="Changes" comment="feat:完成代码实验" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,9 +30,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2kBJFLpxBpMr6y843pZLt2WXZKM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,11 +45,18 @@
   "keyToString": {
     "JUnit.ApiTest.answer.executor": "Run",
     "JUnit.ApiTest.query_unanswered_questions.executor": "Run",
+    "JUnit.ApiTest.test_chatGPT.executor": "Run",
+    "JUnit.SpringBootRunTest.test_openAi.executor": "Run",
+    "JUnit.SpringBootRunTest.test_zsxqApi.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ApiApplication.executor": "Run",
-    "git-widget-placeholder": "8.4-2",
+    "git-widget-placeholder": "8.4-3-domain",
     "jdk.selected.JAVA_MODULE": "1.8",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -65,23 +70,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ApiTest.answer">
-    <configuration name="ApiTest.answer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatbot-api-interfaces" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="top.alcremie.chatbot.api.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="top.alcremie.chatbot.api.test" />
-      <option name="MAIN_CLASS_NAME" value="top.alcremie.chatbot.api.test.ApiTest" />
-      <option name="METHOD_NAME" value="answer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.ApiApplication">
     <configuration name="ApiTest.query_unanswered_questions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chatbot-api-interfaces" />
       <extension name="coverage">
@@ -93,6 +82,54 @@
       <option name="PACKAGE_NAME" value="top.alcremie.chatbot.api.test" />
       <option name="MAIN_CLASS_NAME" value="top.alcremie.chatbot.api.test.ApiTest" />
       <option name="METHOD_NAME" value="query_unanswered_questions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.test_chatGPT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot-api-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.alcremie.chatbot.api.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.alcremie.chatbot.api.test" />
+      <option name="MAIN_CLASS_NAME" value="top.alcremie.chatbot.api.test.ApiTest" />
+      <option name="METHOD_NAME" value="test_chatGPT" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootRunTest.test_openAi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot-api-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.alcremie.chatbot.api.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.alcremie.chatbot.api.test" />
+      <option name="MAIN_CLASS_NAME" value="top.alcremie.chatbot.api.test.SpringBootRunTest" />
+      <option name="METHOD_NAME" value="test_openAi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootRunTest.test_zsxqApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot-api-interfaces" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.alcremie.chatbot.api.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.alcremie.chatbot.api.test" />
+      <option name="MAIN_CLASS_NAME" value="top.alcremie.chatbot.api.test.SpringBootRunTest" />
+      <option name="METHOD_NAME" value="test_zsxqApi" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,9 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.answer" />
-        <item itemvalue="JUnit.ApiTest.query_unanswered_questions" />
         <item itemvalue="Spring Boot.ApiApplication" />
+        <item itemvalue="JUnit.SpringBootRunTest.test_openAi" />
+        <item itemvalue="JUnit.ApiTest.test_chatGPT" />
+        <item itemvalue="JUnit.SpringBootRunTest.test_zsxqApi" />
+        <item itemvalue="JUnit.ApiTest.query_unanswered_questions" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +174,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1722750932540</updated>
-      <workItem from="1722750933594" duration="7666000" />
+      <workItem from="1722750933594" duration="11999000" />
+      <workItem from="1722763996853" duration="5888000" />
+      <workItem from="1722775097240" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -185,11 +226,43 @@
       <option name="project" value="LOCAL" />
       <updated>1722754133515</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat:单元测试-2">
+      <option name="closed" value="true" />
+      <created>1722760423841</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722760423841</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat:gpt测试">
+      <option name="closed" value="true" />
+      <created>1722776042071</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722776042071</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat:完成代码实验">
+      <option name="closed" value="true" />
+      <created>1722779851991</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722779851991</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -206,6 +279,9 @@
     <MESSAGE value="init" />
     <MESSAGE value="feat:init ddd project" />
     <MESSAGE value="feat:Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:Ignore" />
+    <MESSAGE value="feat:单元测试-2" />
+    <MESSAGE value="feat:gpt测试" />
+    <MESSAGE value="feat:完成代码实验" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:完成代码实验" />
   </component>
 </project>
