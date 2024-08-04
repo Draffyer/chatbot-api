@@ -65,4 +65,37 @@ public class ApiTest {
         }
     }
 
+    @Test
+    public void test_chatGPT() throws IOException {
+        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+
+        HttpPost post = new HttpPost("https://open.bigmodel.cn/api/paas/v4/chat/completions");
+        post.addHeader("Content-Type","application/json");
+        post.addHeader("Authorization","Bearer eec21e20085f90c0cf54dee53849582f.qlimkhyI5slBm1Qa");
+
+        String paramJson = "{\n" +
+                "    \"model\": \"glm-4\",\n" +
+                "    \"messages\": [\n" +
+                "        {\n" +
+                "            \"role\": \"user\",\n" +
+                "            \"content\": \"给我写一个java冒泡排序代码\"\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+
+        StringEntity stringEntity = new StringEntity(paramJson, ContentType.create("text/json", "UTF-8"));
+        post.setEntity(stringEntity);
+        CloseableHttpResponse response = httpClient.execute(post);
+
+        if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
+            String res = EntityUtils.toString(response.getEntity());
+            System.out.println(res);
+        }else {
+            System.out.println(response.getStatusLine().getStatusCode());
+        }
+
+
+
+    }
+
 }
